@@ -1,32 +1,32 @@
-import { useState } from 'react'
+import {useState} from 'react'
 
 function Counter(){
-  console.log('Counter function rendered')
-  const [count, setCount] = useState(0)
+const [count, setCount] = useState(0)
 
-  function increment(){
-    console.log(`the counter count is now ${count}`)
-    setCount(count + 1)
-  }
+function increment(){
+  console.log(`the count before the render ${count}`)
+  setCount(count + 1);
+}
 
-  function decrement(){
-    console.log(`the counter count is now ${count}`)
-    setCount(count - 1)
-  }
+function decrement(){
+  console.log(`the count before the render ${count}`)
+  setCount(count + 1);
+}
 
-  function reset(){
-    console.log('this resets the count')
-    setCount(0)
-  }
+function reset(){
+  console.log(`the count before the render ${count}`)
+  setCount(0)
+}
 
   return(
     <div>
       <p>{count}</p>
-      <button onClick={increment}>Add</button>
-      <button onClick={decrement}>Subtract</button>
-      <button onClick={reset}>Reset</button>
+      <buton onClick={increment}>Add</buton>
+      <buton onClick={decrement}>Subtract</buton>
+      <buton onClick={reset}>Reset</buton>
     </div>
   )
+
 }
 
 export default Counter
