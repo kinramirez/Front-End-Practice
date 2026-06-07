@@ -12,25 +12,22 @@ function FormInput(){
         console.log(input)
     }
 
-    function handleClear(){
+    function reset(){
         setInput('')
     }
 
     return(
         <div>
             <form onSubmit={handleSubmit}>
-                <input value={input} onChange={handleChange} type="text"></input>
-                <button type="submit">Submit</button>
-                <button type="button" onClick={handleClear}>Clear</button>
+                <input type='text' value={input} onChange={handleChange} placeholder='Name' />
+                <button type='submit'>Submit</button>
+                <button type='button' onClick={reset}>Reset</button>
             </form>
         </div>
     )
 }
 
 export default FormInput
-
-
-
 //  Import useState
 //  Create FormInput component with input state
 //  Write handleChange function
