@@ -1,16 +1,24 @@
-# React + Vite
+# React Learning Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Goal
+Learn React core concepts through 10 days of deliberate practice.
 
-Currently, two official plugins are available:
+## Structure
+- Day 1-4: useState (counter, form, toggle, multiple states)
+- Day 5-7: useEffect (mount, dependency, API calls)
+- Day 8-10: Advanced patterns
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Progress
+- [x] Day 1: Counter
+- [x] Day 2: Form Input
+- [x] Day 3: Toggle
+- [x] Day 4: Multiple useState
+- [ ] useState Challenge
+- [ ] Day 5: useEffect Mount
+- [ ] Day 6: useEffect Dependency
+- ...
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Learnings
+- State updates are asynchronous
+- Controlled inputs need value + onChange
+- useEffect dependencies control when it runs
