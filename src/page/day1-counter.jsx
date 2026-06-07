@@ -1,36 +1,35 @@
 import {useState} from 'react'
 
 function Counter(){
-const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0)
 
-function increment(){
-  console.log(`the count before the render ${count}`)
-  setCount(count + 1);
-}
+  function increment(){
+    console.log('count: ', count)
+    setCount(count + 1)
+  }
 
-function decrement(){
-  console.log(`the count before the render ${count}`)
-  setCount(count + 1);
-}
+  function decrement(){
+    console.log('count: ', count)
+    setCount(count - 1)
+  }
 
-function reset(){
-  console.log(`the count before the render ${count}`)
-  setCount(0)
-}
+  function reset(){
+    console.log('count: ', count)
+    setCount(0)
+  }
 
   return(
     <div>
       <p>{count}</p>
-      <buton onClick={increment}>Add</buton>
-      <buton onClick={decrement}>Subtract</buton>
-      <buton onClick={reset}>Reset</buton>
+      <button onClick={increment}>Add</button>
+      <button onClick={decrement}>Subtract</button>
+      <button onClick={reset}>Reset</button>
     </div>
   )
-
 }
 
-export default Counter
 
+export default Counter
 // Day 1: Counter Component
 // File: day1-counter.jsx
 

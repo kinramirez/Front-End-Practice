@@ -1,24 +1,22 @@
 import {useState} from 'react'
 
 function Toggle(){
-const [isVisible, setIsVisible] = useState(false)
-
-function handleToggle(){
-    setIsVisible(!isVisible)
-}
+    const [isVisible, setIsVisible] = useState(false)
+    console.log(isVisible)
+    function handleToggle(){
+      setIsVisible(!isVisible)
+    }
 
     return(
-        <div>
-            {isVisible && <p>This is true</p>}
-            {!isVisible && <p>This is false</p>}
-            <button onClick={handleToggle}>Toggle</button>
-        </div>
+      <div>
+        {isVisible && <p>This is true</p>}
+        {!isVisible && <p>This is false</p>}
+        <button onClick={handleToggle}>Toggle</button>
+      </div>
     )
 }
 
 export default Toggle
-
-
 
 //  Import useState
 //  Create state with boolean (true/false) — use useState(false)
