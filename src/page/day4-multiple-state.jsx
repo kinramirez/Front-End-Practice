@@ -1,43 +1,43 @@
 import {useState} from 'react'
 
 function MultipleState() {
-const [name, setName] = useState('')
-const [email, setEmail] = useState('')
-const [age, setAge] = useState(0)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [age, setAge] = useState(0)
 
-function handleNameChange(e){
-  setName(e.target.value)
-}
+  function handleNameChange(e) {
+    setName(e.target.value)
+  }
 
-function handleEmailChange(e){
-  setEmail(e.target.value)
-}
+  function handleEmailChange(e) {
+    setEmail(e.target.value)
+  }
 
-function handleAgeChange(e){
-  setAge(e.target.value)
-}
+  function handleAgeChange(e) {
+    setAge(e.target.value)
+  }
 
-function handleSubmit(e){
-  e.preventDefault()
-  console.log('name: ', {name})
-  console.log('email: ', {email})
-  console.log('age: ', {age})
-}
+  function handleSubmit(e) {
+    e.preventDefault()
+    console.log('name: ', {name})
+    console.log('email: ', {email})
+    console.log('age: ', {age})
+  }
 
-function reset(){
-  setName('')
-  setEmail('')
-  setAge(0)
-}
+  function handleReset() {
+    setName('')
+    setEmail('')
+    setAge(0)
+  }
 
   return(
     <div>
-      <form onSubmit={handleSubmit}>
-        <input type='text' value={name} placeholder="Name" onChange={handleNameChange}/>
-        <input type='email' value={email} placeholder="Email" onChange={handleEmailChange}/>
-        <input type='number' value={age} placeholder="Age" onChange={handleAgeChange} />
+      <form onSubmit={handleSubmit} onReset={handleReset}>
+        <input type='text' placeholder='Name' value={name} onChange={handleNameChange}/>
+        <input type='email' placeholder='Email' value={email} onChange={handleEmailChange}/>
+        <input type='number' placeholder='Age' value={age} onChange={handleAgeChange}/>
         <button type='submit'>Submit</button>
-        <button type='button' onClick={reset}>Reset</button>
+        <button type='reset'>Reset</button>
       </form>
     </div>
   )
