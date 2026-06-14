@@ -13,7 +13,7 @@ Learn React core concepts through 10 days of deliberate practice.
 - [x] Day 2: Form Input
 - [x] Day 3: Toggle
 - [x] Day 4: Multiple useState
-- [ ] useState Challenge
+- [x] useState Challenge
 - [ ] Day 5: useEffect Mount
 - [ ] Day 6: useEffect Dependency
 - ...
