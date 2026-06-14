@@ -1,33 +1,28 @@
 import {useState} from 'react'
 
-function Counter(){
+function Counter() {
   const [count, setCount] = useState(0)
 
-  function increment(){
-    console.log('count: ', count)
+  function handleAddCount() {
     setCount(count + 1)
   }
 
-  function decrement(){
-    console.log('count: ', count)
+  function handleSubtractCount() {
     setCount(count - 1)
   }
 
-  function reset(){
-    console.log('count: ', count)
+  function handleResetCount() {
     setCount(0)
   }
-
   return(
     <div>
       <p>{count}</p>
-      <button onClick={increment}>Add</button>
-      <button onClick={decrement}>Subtract</button>
-      <button onClick={reset}>Reset</button>
+      <button onClick={handleAddCount}>Add</button>
+      <button onClick={handleSubtractCount}>Subtract</button>
+      <button onClick={handleResetCount}>Reset</button>
     </div>
   )
 }
-
 
 export default Counter
 // Day 1: Counter Component

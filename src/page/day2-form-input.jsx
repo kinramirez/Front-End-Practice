@@ -1,30 +1,31 @@
 import {useState} from 'react'
 
-function FormInput(){
-    const [input, setInput] = useState('')
+function FormInput() {
+  const [input, setInput] = useState('')
+  
+  function handleChange(e) {
+    setInput(e.target.value)
+  }
 
-    function handleChange(e){
-        setInput(e.target.value)
-    }
+  function handleSubmit(e) {
+    e.preventDefault()
+    console.log(input)
+  }
 
-    function handleSubmit(e){
-        e.preventDefault()
-        console.log(input)
-    }
+  function handleReset() {
+    setInput('')
+  }
 
-    function reset(){
-        setInput('')
-    }
-
-    return(
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input type='text' value={input} onChange={handleChange} placeholder='Name' />
-                <button type='submit'>Submit</button>
-                <button type='button' onClick={reset}>Reset</button>
-            </form>
-        </div>
-    )
+  return(
+    <div> 
+      <form onSubmit={handleSubmit} onReset={handleReset}>
+        <input type='text' value={input} onChange={handleChange}/>
+        <button type='submit'>Submit</button>
+        <button type='reset'>Reset</button>
+      </form>
+      <div><p>{input}</p></div>
+    </div>
+  )
 }
 
 export default FormInput
