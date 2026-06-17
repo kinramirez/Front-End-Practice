@@ -89,3 +89,11 @@
 ```
 - **Aha Moment:** Spread operator creates a NEW array, doesn't mutate the old one
 - **Code:** src/challenge/todo.jsx
+
+## Array Challenge
+- **Date:** June 17, 2026
+- **What I Learned:**
+  - Building muscle memory in doing array
+  - Using .map() to display array items
+  - Using .filter() to remove items from array
+  - Using spread operator (...) to create a new array without mutating original
