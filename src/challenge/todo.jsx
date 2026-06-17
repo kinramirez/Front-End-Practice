@@ -3,44 +3,41 @@ import {useState} from 'react'
 function Todo() {
   const [input, setInput] = useState('')
   const [todo, setTodo] = useState([])
-  const [isVisible, setIsVisible] = useState(true)
+  const [isVisible, setIsVisible] = useState(false)
 
-  function handleInputChange(e){
+  function handleInput(e) {
     setInput(e.target.value)
   }
 
-  function handleAddTodo(e){
+  function handleAddTodo(e) {
     e.preventDefault()
     setTodo([...todo, input])
     setInput('')
   }
 
-  function handleDeleteTodo(index){
+  function handleRemoveTodo(index) {
     setTodo(todo.filter((todo, i) => i !== index))
   }
 
-  function handleReset(){
-    setTodo([])
-  }
-
-  function handleDisplay(){
+  function handleVisible() {
     setIsVisible(!isVisible)
   }
 
   return(
     <div>
-      
-      <form onSubmit={handleAddTodo} onReset={handleReset}>
-        <input type='text' value={input} onChange={handleInputChange}></input>
-        <button type='submit'>Submit</button>
-        <button type='reset'>Reset</button>
-      </form>
+      <div>
+        <form onSubmit={handleAddTodo}>
+          <input type='text' placeholder='Enter anything' value={input} onChange={handleInput} />
+          <button type='submit'>Submit</button>
+        </form>
+      </div>
 
-      <button onClick={handleDisplay}>{!isVisible ? 'Display' : 'Hide'}</button>
+      <button onClick={handleVisible}>{isVisible ? 'Display':'Hide'}</button>
+
       {isVisible && (
         <ul>
-          {todo.map((todo, index) =>(
-            <li key={index}>{todo}<button onClick={() => handleDeleteTodo(index)}>Delete</button></li>
+          {todo.map((todo, index) => (
+            <li key={index}>{todo}<button onClick={() => handleRemoveTodo(index)}>Delete</button></li>
           ))}
         </ul>
       )}
