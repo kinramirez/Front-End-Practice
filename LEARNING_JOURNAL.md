@@ -97,3 +97,11 @@
   - Using .map() to display array items
   - Using .filter() to remove items from array
   - Using spread operator (...) to create a new array without mutating original
+
+## Day 5 and 6
+- **Date:** June 22, 2026
+- **What I Learned:**
+  - did the day 5 an 6 at the same day since i just need to change the empty "[]" array into {count}
+  - Using useEffect
+  - Using useEffect to control some functions every re-render
+  

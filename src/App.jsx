@@ -9,9 +9,11 @@ import Array2 from './learning array/array-challenge-2'
 import Array3 from './learning array/array-challenge-3'
 import Array4 from './learning array/array-challenge-4'
 import Array5 from './learning array/array-challenge-5'
+import Mount from './page/day5&6-useeffect-mount'
+
 
 function App() {
-  return <Array5/>
+  return <Mount/>
 }
 
 export default App
